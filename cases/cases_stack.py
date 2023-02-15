@@ -14,15 +14,7 @@ class CasesStack(Stack):
         super().__init__(scope, construct_id, **kwargs)
 
         # The code that defines your stack goes here
-
-        # example resource
-        # queue = sqs.Queue(
-        #     self, "CasesQueue",
-        #     visibility_timeout=Duration.seconds(300),
-        # )
-        #bucket = s3.Bucket(self, "MySecondBucketviaCDK", versioned=True)
-        
-
+       
         cfn_connection = glue.CfnConnection(self, "CDKConnection",
             catalog_id="044318038452",
             connection_input=glue.CfnConnection.ConnectionInputProperty(
